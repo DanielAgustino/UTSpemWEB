@@ -6,13 +6,13 @@
 <body>
 
 <?php
-// Fungsi untuk menyimpan data ke dalam file db.html
+
 function simpanData($data) {
     $file = 'db.html';
     file_put_contents($file, $data, FILE_APPEND); // Menggunakan FILE_APPEND untuk menambahkan data ke akhir file
 }
 
-// Fungsi untuk menampilkan data dari file db.html
+
 function tampilkanData() {
     $file = 'db.html';
     if (file_exists($file)) {
@@ -34,10 +34,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $namaOperator = $_POST['nama_operator'];
     $nimMahasiswa = $_POST['nim_mahasiswa'];
 
-    // Format data yang akan disimpan ke dalam file db.html
+   
     $dataBaru = "<tr><td>$namaOperator / $nimMahasiswa</td><td>$namaNegara</td><td>$jumlahPertandingan</td><td>$jumlahMenang</td><td>$jumlahSeri</td><td>$jumlahKalah</td><td>$jumlahPoin.0</td></tr>";
 
-    // Menyimpan data ke dalam file db.html
+   
     simpanData($dataBaru);
 }
 ?>
