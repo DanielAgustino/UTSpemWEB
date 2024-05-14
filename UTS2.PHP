@@ -9,7 +9,7 @@
 
 function simpanData($data) {
     $file = 'db.html';
-    file_put_contents($file, $data, FILE_APPEND); // Menggunakan FILE_APPEND untuk menambahkan data ke akhir file
+    file_put_contents($file, $data, FILE_APPEND); 
 }
 
 
@@ -17,7 +17,7 @@ function tampilkanData() {
     $file = 'db.html';
     if (file_exists($file)) {
         $data = file_get_contents($file);
-        echo $data; // Langsung menampilkan data yang ada dalam file
+        echo $data; 
     } else {
         echo "Belum ada data tersimpan.";
     }
